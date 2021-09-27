@@ -28,7 +28,7 @@ main
     width:100%;
     font-family: 'Dubai Light';
     background-color: black;
-}
+} 
 
 h1 
 {
@@ -154,14 +154,6 @@ nav
   }
 
 /************************************** CV - PARCOURS **************************************/
-
-#mycv 
-{
-    width: 50vw;
-    margin-top: 50px;
-}
-
-
 .bloc-cv 
 {
     display: flex;
@@ -188,7 +180,7 @@ nav
     margin: 5% auto 2%;
     border: 1px solid black;    
     overflow: hidden;
-
+    
     transition: transform 0.5s ease-in-out;
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
@@ -202,8 +194,8 @@ nav
     display: flex;
     flex-direction: row;
     background-color: #59095B;
+    
     box-shadow: 0px -2px 5px black;
-
     position:absolute;
     right: 0;
     bottom:-90vh;
@@ -220,6 +212,15 @@ nav
     
 }
 
+#softskills
+{   
+    width: 50%;
+    height: 100%;
+    background-color: #59095B;
+    color: white;
+    border-right: black 1px solid;
+}
+
 #technos
 {
     width: 50%;
@@ -227,44 +228,7 @@ nav
     background-color: #59095B;
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
 } 
-
-#lt
-{
-    text-align: center;
-    font-size: 2em;
-    font-style: oblique;
-}
-
-#technos .p
-{
-    text-align: center;
-    font-size: 1.5em;
-}
-
-
-#softskills
-{   
-    width: 50%;
-    height: 100%;
-    background-color: white;
-    color: black;
-    padding-top: 10px;
-}
-
-#sf
-{
-    text-align: center;
-    font-size: 2em;
-    font-style: oblique;
-}
-
-#softskills .p
-{
-    text-align: center;
-    font-size: 1.5em;
-}
 
 #experiences
 {
@@ -277,21 +241,46 @@ nav
     text-align: center;
 }
 
-#ex
+.ste
 {
-
-    text-align:center;
-    font-size: 2em;
+    text-align: center;
+    font-size: 35px;
     font-style: oblique;
+    padding-bottom: 3%;
 }
 
-#experiences p
+#softskills .p, #technos .p
 {
-    align-self: flex-start;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-
+#experiences .p
+{
+    font-size:18px;
+}
 /************************************** CONTACT **************************************/
+#section-contact
+{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white; 
+    background-image: url(./img/clavier1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+form
+{
+    padding : 50px 0;
+}
+
 
 form textarea
 {
@@ -351,6 +340,5 @@ footer
     font-family: 'Dubai Light';
     color: #ffffff;
     text-align: center;
-    margin-top: 50px;
     background-color: #59095B;
 }
