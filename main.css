@@ -16,11 +16,23 @@
     src: local('Dubai Light'), url('fonts/dubai-light.woff') format('woff');
 }
 
-html, body, p
+html, body
 {
     width: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+header
+{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    font-family: 'Dubai Light';
+    font-size: 20px;
+    z-index :100;
 }
 
 main 
@@ -28,7 +40,18 @@ main
     width:100%;
     font-family: 'Dubai Light';
     background-color: black;
+    padding-bottom:20px;
 } 
+
+footer 
+{
+    width: 100%;
+    height: 50px;
+    font-family: 'Dubai Light';
+    color: #ffffff;
+    text-align: center;
+    background-color: #59095B;
+}
 
 h1 
 {
@@ -40,6 +63,14 @@ h1
     background-color :#59095B;
     width: 100%;
     margin: 0;
+}
+
+p
+{
+    margin:0;
+    padding:0;
+    line-height: 40px;
+    vertical-align: middle;
 }
 
 .btn-purple 
@@ -60,50 +91,46 @@ h1
 
 
 /************************************** NAVIGATION **************************************/
+nav
+{
+    width: 100%;
+    height: 100%;
+}
 
-li
+nav>ul
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+    padding:0;
+    margin :0;
+    justify-content: center;
+    background-color: #59095B;
+}
+
+nav>ul>li
 {
     list-style-type: none;
     display: inline-block;
-    margin:10px;
+    margin:10px 20px;
+    align-items: center;
+    padding: 0;
 }
 
-a
+nav>ul>li>a
 {
     text-decoration: none;
     color: #ffffff;
 }
 
-a:hover
+nav>ul>li>a:hover
 {
     color:#000000;
 }
 
-nav
-{
-    width: 100%;
-}
-
-.navig 
-{
-    Display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #59095B;
-}
-
 /************************************** PHRASE ACCROCHE **************************************/
-
-.title-section 
-{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    background-color:none;
-    width: 100%;
-}
-
 .no-speech 
 {
     width: 100%;
@@ -115,43 +142,52 @@ nav
     background-attachment: fixed;
     overflow: hidden;
     display:flex;
+    justify-content: center;
 }
 
 #essential 
 {
-    margin: auto 0;
-    background-color: #ffffff;
     font-family: 'Gabriola';
-    color: #59095B;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
-    padding: 0px 15px;
     width: 100%;
-    margin :auto;
-    position: relative;
+    margin-top: 70vh;
+    /* position: relative; */
     overflow: hidden;
+    line-height: initial;
 
-    background: linear-gradient(90deg,rgba(255, 255, 255, 0),#59095B,#fff ,#59095B,rgba(255, 255, 255, 0));
-    background-repeat: no-repeat;
-    background-size: 80%;
+    background: linear-gradient(90deg,#fff,#59095B,#fff,#59095B,#fff,#59095B,#fff);
+    background-repeat:round;
+    background-size: 90%;
     animation: animate 5s linear infinite;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  }
+}
   
-  @keyframes animate 
-  {
+@keyframes animate 
+{
     0% 
     {
-      background-position: -500%;
+        background-position: -500%;
     }
 
     100% 
     {
-      background-position: 500%;
+        background-position: 500%;
     }
-  }
+}
+
+img
+{
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    top: 100px;
+    border-radius:200px;
+    border: 2px solid black;
+    opacity: 0.6;
+}
 
 /************************************** CV - PARCOURS **************************************/
 .bloc-cv 
@@ -168,67 +204,53 @@ nav
 
 #parcours
 {
-    border-radius: 1%;
+    border-radius: 10px;
     position: relative;
-    width: 60%;
-    height: 100vh;
+    max-width: 1000px;
+    height:500px;
+    max-height:500px;
     background-color: #59095B;
     color:#fff;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    margin: 5% auto 2%;
     border: 1px solid black;    
     overflow: hidden;
-    
-    transition: transform 0.5s ease-in-out;
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-}
-
-#content
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index:10;
-    display: flex;
-    flex-direction: row;
-    background-color: #59095B;
-    
-    box-shadow: 0px -2px 5px black;
-    position:absolute;
-    right: 0;
-    bottom:-90vh;
-    transition: transform 0.5s ease-in-out;
-    -moz-transition: -moz-transform 0.5s ease-in-out;
-    -o-transition: -o-transform 0.5s ease-in-out;
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-}
-
-#content:hover
-{
-    transform: translateY(-90vh);
-    -webkit-transform: translateY(-90vh);
-    
+    margin: 0 auto;
 }
 
 #softskills
 {   
-    width: 50%;
-    height: 100%;
-    background-color: #59095B;
+    position: absolute;
+    bottom : 55px;
+    left:-170px;
+    width: 500px;
+    height: 40px;
+    background-color: #69465C;
     color: white;
-    border-right: black 1px solid;
+    transform: rotate(45deg);
+    transition: 2s all;
+    overflow: hidden;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
 }
 
 #technos
 {
-    width: 50%;
-    height:100%;
-    background-color: #59095B;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    bottom : 90px;
+    left:-150px;
+    width: 500px;
+    height: 40px;
+    background-color: #69465C;
+    color: white;
+    transform: rotate(45deg);
+    transition: 2s all;
+    overflow: hidden;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
 } 
+
 
 #experiences
 {
@@ -238,15 +260,21 @@ nav
     background-color: #69465C;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: center;  
 }
 
 .ste
 {
+    height: 40px;
     text-align: center;
     font-size: 35px;
     font-style: oblique;
-    padding-bottom: 3%;
+    background-color: #59095B;
+}
+
+#softskills>.ste:hover,#technos>.ste:hover
+{
+    color: black;
 }
 
 #softskills .p, #technos .p
@@ -257,7 +285,8 @@ nav
 
 #experiences .p
 {
-    font-size:18px;
+    font-size:20px;
+    line-height:25px ;
 }
 /************************************** CONTACT **************************************/
 #section-contact
@@ -332,13 +361,3 @@ form input,textarea
 }
 
 /************************************** FOOTER **************************************/
-
-footer 
-{
-    display: flex;
-    justify-content: center;
-    font-family: 'Dubai Light';
-    color: #ffffff;
-    text-align: center;
-    background-color: #59095B;
-}

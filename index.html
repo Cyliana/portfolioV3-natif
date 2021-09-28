@@ -15,94 +15,74 @@
 </head>
 
 <body>
-    <main>
-
-        <!-- SECTION NAVIGATION-->
-
+    <header>
         <nav>
-            <div class="container">
-                <div class="navig">
-                    <ul id="nav1">
-                        <li><a aria-current="page" href="index.html">Accueil</a></li>
-                        <li><a href="projets.html">Projets</a></li>
-                        <li><a href="moodboard.html">Moodboard</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            <ul>
+                <li><a aria-current="page" href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="moodboard.html">Moodboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
+        </nav>
+    </header>
+    <main>
         <div class="no-speech">
+            <img src="./img/amanda1.png" alt="Une photo de moi.">
             <p id="essential">« Pas de grand discours, juste l'essentiel » - Amanda Taddei</p>
         </div>
 
-        <h1>Mon Cv , Mon parcours</h1>
+        <h1>Mon CV , Mon parcours</h1>
 
-        <div id="parcours">
-            <div id="content">
-                <div id="softskills">
-                    <p class ="ste"> < Softs Skills > </p>
-                    <p class="p">Curieuse</p>
-                    <p class="p">Rigoureuse</p>
-                    <p class="p">Dynamique</p>
-                    <p class="p">Adaptable</p>
-                    <p class="p">Organisée</p>
-                </div>
-                <div id="technos">
-                    <p class="ste"> < Les technologies > </p>
-                    <p class="p">Javascript</p>
-                    <p class="p">HTML 5</p>
-                    <p class="p">CSS 3</p>
-                    <p class="p">PHP</p>
-                    <p class="p">MYSQL</p>
-                    <p class="p">Git</p>
-                    <p class="p">GitHub</p>
-                    <p class="p">Adobe Photoshop</p>
-                    <p class="p">Power Point</p>
-                </div>
-            </div>
-            <div id="experiences">
-                <p class="ste"> < Expériences > </p>
-                <p class="p">2020 / aujourd'hui - OnlineFormaPro </br>- Formation pré-qualifiante et formation
-                    qualifiante Developpement Web et Web mobile.</p></br>
-                <p class="p">2019/2020 - Renault Trucks - Opératrice </br> Assemblage des radiateurs moteurs</p></br>
-                <p class="p">2017/2019 - L'instant Bar Restaurant - Gérante </br> - Mise en place, serveuse, gestion
-                    administrative, gestion des stocks, entretien journalier des locaux</p>
-                </br>
-                <p class="p">2017 - Formation gestion d'entreprise - Chambre des métiers de l'ain</p></br>
-                <p class="p">2013/2016 - CAF DE L'AIN - Conseillère offres de services, accueillir
-                    l'allocataire</br>- Conseiller et orienter vers le CAF.FR</p></br>
-                <p class="p">2007 - BEP Vente Action Marchande</p></br>
-            </div>
-
-        </div>
         <div class="bloc-cv">
-            <p>Cliquez ici pour télécharger en version PDF :</p>
+            <p>Cliquez ici pour le télécharger en version PDF :</p>
             <a href="./doc/cv-amanda-taddei.zip" class="btn-purple"><i class="fas fa-download"></i></a>
         </div>
 
-        <h1 class="h1">Contact</h1>
+        <div id="parcours">
+            <div id="experiences">
+                <p class="ste">
+                    < Expériences >
+                </p><br>
+                <p class="p">2020 / aujourd'hui - OnlineFormaPro <br>- Formation pré-qualifiante et formation
+                    qualifiante Developpement Web et Web mobile.</p><br>
+                <p class="p">2019/2020 - Renault Trucks - Opératrice <br> Assemblage des radiateurs moteurs</p><br>
+                <p class="p">2017/2019 - L'instant Bar Restaurant - Gérante <br> - Mise en place, serveuse, gestion
+                    administrative, gestion des stocks, entretien journalier des locaux.</p><br>
+                <p class="p">2017 - Formation gestion d'entreprise - Chambre des métiers de l'ain</p><br>
+                <p class="p">2013/2016 - CAF DE L'AIN - Conseillère offres de services, accueillir
+                    l'allocataire<br>- Conseiller et orienter vers le CAF.FR</p><br>
+                <p class="p">2007 - BEP Vente Action Marchande</p><br>
+            </div>
 
-        <div id="section-contact">
-            <div class="formulaire">
-                <form action="" methode='post'>
-                    <label for="firstname">Votre nom</label></br>
-                    <input type="text" id="firstname"></br>
-                    <label for="name">Votre prenom</label></br>
-                    <input type="text" id="name"></br>
-                    <label for="name">Votre e-mail</label></br>
-                    <input type="text" id="mail"></br>
-                    <label for="textarea">Votre message</label></br>
-                    <textarea id="textarea" name="textarea" rows="5" col="10"></textarea></br>
-                    <button class="btn-purple">Envoyer</button>
-                </form>
+            <div id="softskills" onclick="showSoftSkills();">
+                <p class="ste">
+                    < Softs Skills >
+                </p><br><br><br>
+                <p class="p">Curieuse</p>
+                <p class="p">Rigoureuse</p>
+                <p class="p">Dynamique</p>
+                <p class="p">Adaptable</p>
+                <p class="p">Organisée</p>
+            </div>
+            <div id="technos" onclick="showTechnos();">
+                <p class="ste">
+                    < Les technologies >
+                </p><br>
+                <p class="p">HTML 5</p>
+                <p class="p">CSS 3</p>
+                <p class="p">Javascript</p>
+                <p class="p">PHP</p>
+                <p class="p">MYSQL</p>
+                <p class="p">Git</p>
+                <p class="p">GitHub</p>
+                <p class="p">Adobe Photoshop</p>
+                <p class="p">Power Point</p>
             </div>
         </div>
     </main>
     <footer>
-        <div>
             <p>Amanda Taddei - Portfolio V3 - 2021</p>
-        </div>
     </footer>
 
     <script src="main.js"></script>
