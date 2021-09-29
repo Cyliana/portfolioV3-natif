@@ -51,6 +51,8 @@ footer
     color: #ffffff;
     text-align: center;
     background-color: #59095B;
+    position:static;
+    bottom:0;
 }
 
 h1 
@@ -152,7 +154,6 @@ nav>ul>li>a:hover
     text-align: center;
     width: 100%;
     margin-top: 70vh;
-    /* position: relative; */
     overflow: hidden;
     line-height: initial;
 
@@ -178,7 +179,7 @@ nav>ul>li>a:hover
     }
 }
 
-img
+.no-speech img
 {
     position:absolute;
     width: 300px;
@@ -196,7 +197,7 @@ img
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5px;
+    margin: 50px auto;
     width: 100%;
     text-align: center;
     color:white;
@@ -204,19 +205,18 @@ img
 
 #parcours
 {
-    border-radius: 10px;
     position: relative;
     max-width: 1000px;
     height:500px;
     max-height:500px;
-    background-color: #59095B;
     color:#fff;
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    border: 1px solid black;    
+    justify-content: center; 
     overflow: hidden;
-    margin: 0 auto;
+    margin: 70px auto 0 auto;
+    border: 1px solid #59095B;
+    background-color: #69465C;
 }
 
 #softskills
@@ -257,7 +257,7 @@ img
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #69465C;
+    background-color: #69465c00;
     display: flex;
     flex-direction: column;
     text-align: center;  
@@ -288,6 +288,153 @@ img
     font-size:20px;
     line-height:25px ;
 }
+
+/************************************** PROJETS **************************************/
+.grid
+{
+    background-size: cover;
+    background-position:center;
+
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.grid:hover
+{
+    -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+#gridcontent
+{
+    max-width: 1000px;
+    height:500px;
+    max-height:500px;
+    color:#fff;
+    margin: 250px auto;
+    overflow:hidden ;
+
+
+    display: grid;                                      /*mise en place du grid*/
+    grid-template-rows: 100px 100px 100px 100px 100px;  /*hauteur des lignes*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;             /*largeur des colonnes*/                           
+    grid-gap : 2px;                                     /*espaces entre les éléments*/
+}
+
+#grid1
+{
+    background-image: url(./img/hackcess.jpg);
+
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    grid-row-start: 1; 
+    grid-row-end: 3;
+}
+
+#grid2
+{
+    background-image: url(./img/jungle-accueil.jpg);
+
+    grid-column-start: 2; 
+    grid-column-end: 4; 
+    grid-row-start: 1; 
+    grid-row-end: 2;
+}
+
+#grid3
+{
+    background-image: url(./img/travel.jpg);
+
+    grid-column-start: 4; 
+    grid-column-end: 5; 
+    grid-row-start: 1; 
+    grid-row-end: 4;
+}
+
+#grid4
+{
+    background-image: url(./img/portfoliov1.jpg);
+
+    grid-column-start:1; 
+    grid-column-end:1; 
+    grid-row-start:3; 
+    grid-row-end: 5;
+}
+
+#grid5
+{
+    background-image: url(./img/nevinator.jpg);
+
+    grid-column-start: 3; 
+    grid-column-end: 5; 
+    grid-row-start:5 ; 
+    grid-row-end: 5;
+}
+
+#grid6
+{
+    background-image: url(./img/lfmr.jpg);
+
+    grid-column-start: 4; 
+    grid-column-end: 4; 
+    grid-row-start: 4; 
+    grid-row-end: 4;
+}
+
+#grid7
+{
+    background-image: url(./img/nevinator-logo1.png);
+
+    grid-column-start: 1; 
+    grid-column-end: 1; 
+    grid-row-start: 5; 
+    grid-row-end: 5;
+}
+
+#grid8
+{
+    background-image: url(./img/DSM.png);
+
+    grid-column-start: 3; 
+    grid-column-end:3; 
+    grid-row-start:3; 
+    grid-row-end: 5;
+}
+
+#grid9
+{
+    background-image: url(./img/casse-brique.png);
+
+    grid-column-start:2; 
+    grid-column-end: 3; 
+    grid-row-start: 2; 
+    grid-row-end: 6;
+}
+
+#grid10
+{
+    background-image: url(./img/logo-playstation.png);
+
+    grid-column-start:3; 
+    grid-column-end:3; 
+    grid-row-start:2; 
+    grid-row-end: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /************************************** CONTACT **************************************/
 #section-contact
 {
@@ -350,10 +497,10 @@ form input,textarea
     -ms-overflow-style: none;
 }
 
-/* ::-webkit-scrollbar 
+::-webkit-scrollbar 
 {
     display: none;
-} */
+}
 
 .slide img 
 {

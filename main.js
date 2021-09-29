@@ -14,7 +14,7 @@ function showSoftSkills()
         e.style.transform = "rotate(0deg)";
         e.style.left = "0px";
         e.style.bottom = "0px";
-        e.style.height = "calc(100% - 50px)";
+        e.style.height = "calc(100% - 40px)";
     }
 }
 
@@ -34,7 +34,7 @@ function showTechnos()
         e.style.transform = "rotate(0deg)";
         e.style.left = "500px";
         e.style.bottom = "0px";
-        e.style.height = "calc(100% - 50px)";
+        e.style.height = "calc(100% - 40px)";
     }
     
     
