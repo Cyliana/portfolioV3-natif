@@ -207,8 +207,8 @@ nav>ul>li>a:hover
 {
     position: relative;
     max-width: 1000px;
-    height:500px;
-    max-height:500px;
+    height:600px;
+    max-height:600px;
     color:#fff;
     display: flex;
     flex-flow: column;
@@ -263,13 +263,16 @@ nav>ul>li>a:hover
     text-align: center;  
 }
 
-.ste
+h2
 {
     height: 40px;
+    font-size :30px;
     text-align: center;
-    font-size: 35px;
     font-style: oblique;
     background-color: #59095B;
+    margin:0;
+    font-family:'Dubai Light';
+
 }
 
 #softskills>.ste:hover,#technos>.ste:hover
@@ -290,7 +293,7 @@ nav>ul>li>a:hover
 }
 
 /************************************** PROJETS **************************************/
-.grid
+.celgrid
 {
     background-size: cover;
     background-position:center;
@@ -301,7 +304,7 @@ nav>ul>li>a:hover
 	transition: .3s ease-in-out;
 }
 
-.grid:hover
+.celgrid:hover
 {
     -webkit-filter: grayscale(0);
 	filter: grayscale(0);
@@ -313,27 +316,26 @@ nav>ul>li>a:hover
     height:500px;
     max-height:500px;
     color:#fff;
-    margin: 250px auto;
+    margin: 150px auto;
     overflow:hidden ;
-
 
     display: grid;                                      /*mise en place du grid*/
     grid-template-rows: 100px 100px 100px 100px 100px;  /*hauteur des lignes*/
     grid-template-columns: 1fr 1fr 1fr 1fr;             /*largeur des colonnes*/                           
-    grid-gap : 2px;                                     /*espaces entre les éléments*/
+    grid-gap : 10px;                                     /*espaces entre les éléments*/
 }
 
-#grid1
+#cel1
 {
-    background-image: url(./img/hackcess.jpg);
-
+    background-image:url(./img/hackcess.jpg) ;
     grid-column-start: 1; 
     grid-column-end: 2; 
     grid-row-start: 1; 
     grid-row-end: 3;
+
 }
 
-#grid2
+#cel2
 {
     background-image: url(./img/jungle-accueil.jpg);
 
@@ -343,7 +345,7 @@ nav>ul>li>a:hover
     grid-row-end: 2;
 }
 
-#grid3
+#cel3
 {
     background-image: url(./img/travel.jpg);
 
@@ -353,7 +355,7 @@ nav>ul>li>a:hover
     grid-row-end: 4;
 }
 
-#grid4
+#cel4
 {
     background-image: url(./img/portfoliov1.jpg);
 
@@ -363,7 +365,7 @@ nav>ul>li>a:hover
     grid-row-end: 5;
 }
 
-#grid5
+#cel5
 {
     background-image: url(./img/nevinator.jpg);
 
@@ -373,7 +375,7 @@ nav>ul>li>a:hover
     grid-row-end: 5;
 }
 
-#grid6
+#cel6
 {
     background-image: url(./img/lfmr.jpg);
 
@@ -383,7 +385,7 @@ nav>ul>li>a:hover
     grid-row-end: 4;
 }
 
-#grid7
+#cel7
 {
     background-image: url(./img/nevinator-logo1.png);
 
@@ -393,7 +395,7 @@ nav>ul>li>a:hover
     grid-row-end: 5;
 }
 
-#grid8
+#cel8
 {
     background-image: url(./img/DSM.png);
 
@@ -403,7 +405,7 @@ nav>ul>li>a:hover
     grid-row-end: 5;
 }
 
-#grid9
+#cel9
 {
     background-image: url(./img/casse-brique.png);
 
@@ -413,7 +415,7 @@ nav>ul>li>a:hover
     grid-row-end: 6;
 }
 
-#grid10
+#cel10
 {
     background-image: url(./img/logo-playstation.png);
 

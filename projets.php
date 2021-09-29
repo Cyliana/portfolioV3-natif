@@ -26,8 +26,9 @@
             <!-- SECTION PORTFOLIO-->
         <main>
             <h1>Mes projets réalisés en formation et en autodidacte</h1>
+            
             <div id="gridcontent">
-                <div class="grid" id="grid1"></div>
+                <div class="celgrid" id="cel1"></div>
                 <!-- <div>
                     <h5>Site L'FMR</h5>
                     <p>Projet réalisé entièrement en autodidacte.<br>Mise en pratique des connaissances en HTML5 et CSS3.<br>J'ai également essayé de respecter au maximum la responsivité avec les bases acquises à cesujet.
@@ -36,7 +37,7 @@
                     <a href="https://github.com/Cyliana/FMR" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div> -->
                
-                <div class="grid" id="grid2"></div>    
+                <div class="celgrid" id="cel2"></div>    
                 <!-- <div>
                     <h5>Site Agence de voyage</h5>
                     <p>Page de site 'one page' réalisée en HTML et CSS3 pas à pas avec une formation en ligne.</p>
@@ -44,7 +45,7 @@
                     <a href="https://github.com/Cyliana/travel/" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div> -->
                
-                <div class="grid" id="grid3"></div>
+                <div class="celgrid" id="cel3"></div>
                 <!-- <div>
                     <h5>Mon Portfolio Version 1</h5>
                     <p>Première version de mon portfolio réalisé en HTML5 et CSS3 principalement.<br>Du JS a été intégrer pour la responsivité du menu burger en format mobile avec l'aide du formateur.</p>
@@ -52,7 +53,7 @@
                     <a href="https://github.com/Cyliana/PortfolioV1" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div> -->
                     
-                <div class="grid" id="grid4"></div>
+                <div class="celgrid" id="cel4"></div>
                 <!-- <div>
                     <h5>Hack'cess</h5>
                     <p>Site sur l'accessibilité numérique<br>Réalisé principalement à l'aide de bootstrap et intégration de plusieurs focntionnalités en JS.
@@ -61,7 +62,7 @@
                     <a href="https://github.com/Bourg-en-Stress/accessibility" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div> -->
                 
-                <div class="grid" id="grid5"></div>
+                <div class="celgrid" id="cel5"></div>
                 <!-- <div>
                     <h5>Nevinator</h5>
                     <p>Site réalisé dans le cadre d'un stage pour l'association Nevers Libre.<br>Developpé avec Bootstrap.</p>
@@ -69,21 +70,21 @@
                     <a href="https://github.com/Bourg-en-Stress/nevinator" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div> -->
                 
-                <div class="grid" id="grid6"></div>
+                <div class="celgrid" id="cel6"></div>
                 <!-- <div>
                     <h5>Une jungle</h5>
                     <p>Réalisation d'une illustration pour le site nevinator</p>
                     <a href="img/presentation-illustration-nevinator.jpg" target="_blank" class="btn-purple"><i class="fas fa-link"></i></a>
                 </div> -->
                 
-                <div class="grid" id="grid7"></div>
+                <div class="celgrid" id="cel7"></div>
                 <!-- <div>
                     <h5>Logo nevinator</h5>
                     <p>Réalisation d'un logo pour le site nevinator</p>
                     <a href="img/presentation-logo-nevinator.jpg" target="_blank" class="btn-purple"><i class="fas fa-link"></i></a>
                 </div> -->
 
-                <div class="grid" id="grid8"></div>
+                <div class="celgrid" id="cel8"></div>
                 <!-- <div>
                     <h5>Dance School Manager</h5>
                     <p>Réalisation d'une application de gestion d'école de danse</p>
@@ -91,7 +92,7 @@
                     <a href="https://github.com/Bourg-en-Stress/dsm" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div> -->
 
-                <div class="grid" id="grid9"></div>
+                <div class="celgrid" id="cel9"></div>
                 <!-- <div>
                     <h5>Casse brique</h5>
                     <p>Réalisation d'un casse brique en JS objet</p>
@@ -99,7 +100,7 @@
                     <a href="https://github.com/Cyliana/cassebrique" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div> -->
 
-                <div class="grid" id="grid10"></div>
+                <div class="celgrid" id="cel10"></div>
                 <!-- <div>
                     <h5>Logo Playstation</h5>
                     <p>Réalisation d'un casse brique en JS objet</p>
