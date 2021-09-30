@@ -19,7 +19,8 @@
 html, body
 {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    background-color: black;
     margin: 0;
     padding: 0;
 }
@@ -39,8 +40,6 @@ main
 {
     width:100%;
     font-family: 'Dubai Light';
-    background-color: black;
-    padding-bottom:20px;
 } 
 
 footer 
@@ -51,8 +50,6 @@ footer
     color: #ffffff;
     text-align: center;
     background-color: #59095B;
-    position:static;
-    bottom:0;
 }
 
 h1 
@@ -67,12 +64,21 @@ h1
     margin: 0;
 }
 
-p
+h2
 {
+    font-size :30px;
+    font-weight: lighter;
+    text-align: center;
+    font-style: oblique;
+    background-color: #59095B;
     margin:0;
-    padding:0;
-    line-height: 40px;
-    vertical-align: middle;
+    font-family:'Dubai Light';
+    color: white;
+}
+
+.fab, .fas
+{
+    width: 100px;
 }
 
 .btn-purple 
@@ -82,6 +88,7 @@ p
     width: 100px;
     border-radius: 3px;
     margin-bottom: 20px;
+    text-align:center;
 }
 
 .btn-purple:hover 
@@ -197,7 +204,7 @@ nav>ul>li>a:hover
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px auto;
+    margin: 30px auto;
     width: 100%;
     text-align: center;
     color:white;
@@ -207,14 +214,14 @@ nav>ul>li>a:hover
 {
     position: relative;
     max-width: 1000px;
-    height:600px;
-    max-height:600px;
+    height:570px;
+    max-height:570px;
     color:#fff;
     display: flex;
     flex-flow: column;
     justify-content: center; 
     overflow: hidden;
-    margin: 70px auto 0 auto;
+    margin: 30px auto 0 auto;
     border: 1px solid #59095B;
     background-color: #69465C;
 }
@@ -263,18 +270,6 @@ nav>ul>li>a:hover
     text-align: center;  
 }
 
-h2
-{
-    height: 40px;
-    font-size :30px;
-    text-align: center;
-    font-style: oblique;
-    background-color: #59095B;
-    margin:0;
-    font-family:'Dubai Light';
-
-}
-
 #softskills>.ste:hover,#technos>.ste:hover
 {
     color: black;
@@ -284,20 +279,32 @@ h2
 {
     text-align: center;
     font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 #experiences .p
 {
     font-size:20px;
-    line-height:25px ;
+    line-height:25px;
+    margin: 0;
+    padding: 0;
 }
 
 /************************************** PROJETS **************************************/
+#entete
+{
+    width:100%;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 150px auto 0 auto; 
+}
+
+
 .celgrid
 {
     background-size: cover;
-    background-position:center;
-
     -webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	-webkit-transition: .3s ease-in-out;
@@ -313,12 +320,11 @@ h2
 #gridcontent
 {
     max-width: 1000px;
-    height:500px;
+    height: 800px;
+    max-height:800px;
+    height: 500px;
     max-height:500px;
-    color:#fff;
-    margin: 150px auto;
-    overflow:hidden ;
-
+    margin:70px auto;
     display: grid;                                      /*mise en place du grid*/
     grid-template-rows: 100px 100px 100px 100px 100px;  /*hauteur des lignes*/
     grid-template-columns: 1fr 1fr 1fr 1fr;             /*largeur des colonnes*/                           
@@ -327,18 +333,16 @@ h2
 
 #cel1
 {
-    background-image:url(./img/hackcess.jpg) ;
+    background-image: url(./img/hackcess.jpg);
     grid-column-start: 1; 
     grid-column-end: 2; 
     grid-row-start: 1; 
     grid-row-end: 3;
-
 }
 
 #cel2
 {
-    background-image: url(./img/jungle-accueil.jpg);
-
+    background-image: url(./img/travel.jpg);
     grid-column-start: 2; 
     grid-column-end: 4; 
     grid-row-start: 1; 
@@ -347,8 +351,7 @@ h2
 
 #cel3
 {
-    background-image: url(./img/travel.jpg);
-
+    background-image: url(./img/jungle-accueil.jpg);
     grid-column-start: 4; 
     grid-column-end: 5; 
     grid-row-start: 1; 
@@ -358,7 +361,6 @@ h2
 #cel4
 {
     background-image: url(./img/portfoliov1.jpg);
-
     grid-column-start:1; 
     grid-column-end:1; 
     grid-row-start:3; 
@@ -368,7 +370,6 @@ h2
 #cel5
 {
     background-image: url(./img/nevinator.jpg);
-
     grid-column-start: 3; 
     grid-column-end: 5; 
     grid-row-start:5 ; 
@@ -378,7 +379,6 @@ h2
 #cel6
 {
     background-image: url(./img/lfmr.jpg);
-
     grid-column-start: 4; 
     grid-column-end: 4; 
     grid-row-start: 4; 
@@ -388,7 +388,6 @@ h2
 #cel7
 {
     background-image: url(./img/nevinator-logo1.png);
-
     grid-column-start: 1; 
     grid-column-end: 1; 
     grid-row-start: 5; 
@@ -398,7 +397,6 @@ h2
 #cel8
 {
     background-image: url(./img/DSM.png);
-
     grid-column-start: 3; 
     grid-column-end:3; 
     grid-row-start:3; 
@@ -408,25 +406,83 @@ h2
 #cel9
 {
     background-image: url(./img/casse-brique.png);
-
     grid-column-start:2; 
     grid-column-end: 3; 
     grid-row-start: 2; 
-    grid-row-end: 6;
+    grid-row-end: 4;
 }
 
 #cel10
 {
     background-image: url(./img/logo-playstation.png);
-
     grid-column-start:3; 
     grid-column-end:3; 
     grid-row-start:2; 
     grid-row-end: 2;
 }
 
+#cel11
+{
+    background-image: url(./img/wild-circus.png);
+    grid-column-start:2; 
+    grid-column-end:3; 
+    grid-row-start:4; 
+    grid-row-end: 6;
+}
 
+#overlay 
+{	
+    position:fixed;
+    top: 50px; 
+    left: 0;
+    bottom:0;
+    right:0;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    z-index: 60;
+    display:none;
+}
 
+#modal 
+{
+    border:5px solid #59095B ;  
+    border-radius: 5px;
+    min-width: 50vw;
+    max-width:80vw;
+    min-height: 50vh;
+    max-height: 80vh;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform:translate(-50%,-50%);
+    color: white;
+    background:black;
+    /* display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; */
+    z-index: 65;
+    display:none;
+    text-align: center;
+}
+
+.close
+{
+    font-size: 20px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border:5px solid #59095B;
+    background-color: black;
+    border-radius: 20px;
+    position: absolute;
+    right:-15px;
+    top: -15px;
+    margin: 0;
+    cursor: pointer;
+}
 
 
 
