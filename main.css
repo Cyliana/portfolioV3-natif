@@ -23,9 +23,15 @@
 
 html, body
 {
+    --dark : black;
+    --dark-purple : #59095B;
+    --light-purple : #69465C;
+
+    --text-color : white;
+
     width: 100%;
-    height: auto;
-    background-color: black;
+    height: 100%;
+    background-color: var(--dark);
 }
 
 header
@@ -37,7 +43,7 @@ header
     font-family: 'Dubai Light';
     font-size: 20px;
     z-index :100;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--dark);
 }
 
 main 
@@ -56,20 +62,20 @@ footer
     vertical-align: middle;
     height: 50px;
     font-family: 'Dubai Light';
-    color: #ffffff;
+    color:var(--text-color);
     text-align: center;
-    background-color: #59095B;
-    border-top: 1px solid black;
+    background-color: var(--dark-purple);
+    border-top: 1px solid var(--dark);
 }
 
 h1 
 {
     font-family: 'Gabriola';
     font-weight: lighter;
-    color: #ffffff;
+    color:var(--text-color);
     text-align: center;
     padding-top: 5px;
-    background-color :#59095B;
+    background-color :var(--dark-purple);
     min-width: 100%;
     max-width: 100%;
     margin: 0;
@@ -81,10 +87,10 @@ h2
     font-weight: lighter;
     text-align: center;
     font-style: oblique;
-    background-color: #59095B;
+    background-color: var(--dark-purple);
     margin:0;
     font-family:'Dubai Light';
-    color: white;
+    color:var(--text-color);
 }
 
 h3
@@ -100,8 +106,8 @@ h3
 
 .btn-purple 
 {
-    background-color: #69465C;
-    color: white;
+    background-color: var(--light-purple);
+    color:var(--text-color);
     width: 100px;
     border-radius: 3px;
     margin:0 20px 20px 20px;
@@ -110,13 +116,12 @@ h3
 
 .btn-purple:hover 
 {
-    background-color: #59095B;
-    color: white;
+    background-color: var(--dark-purple);
+    color:var(--text-color);
 }
 
-
-
 /************************************** NAVIGATION **************************************/
+
 nav
 {
     width: 100%;
@@ -133,7 +138,7 @@ nav>ul
     padding:0;
     margin :0;
     justify-content: center;
-    background-color: #59095B;
+    background-color: var(--dark-purple);
 }
 
 nav>ul>li
@@ -148,15 +153,16 @@ nav>ul>li
 nav>ul>li>a
 {
     text-decoration: none;
-    color: #ffffff;
+    color:var(--text-color);
 }
 
 nav>ul>li>a:hover
 {
-    color:#000000;
+    color:var(--dark);
 }
 
 /************************************** PHRASE ACCROCHE **************************************/
+
 .no-speech 
 {
     width: 100%;
@@ -210,11 +216,12 @@ nav>ul>li>a:hover
     height: 300px;
     top: 100px;
     border-radius:200px;
-    border: 2px solid black;
+    border: 2px solid var(--dark);
     opacity: 0.6;
 }
 
 /************************************** CV - PARCOURS **************************************/
+
 .bloc-cv 
 {
     display: flex;
@@ -224,7 +231,7 @@ nav>ul>li>a:hover
     margin: 30px auto;
     width: 100%;
     text-align: center;
-    color:white;
+    color:var(--text-color);
 }
 
 #parcours
@@ -233,14 +240,14 @@ nav>ul>li>a:hover
     max-width: 1000px;
     height:570px;
     max-height:570px;
-    color:#fff;
+    color:var(--text-color);
     display: flex;
     flex-flow: column;
     justify-content: center; 
     overflow: hidden;
-    margin: 30px auto 0 auto;
-    border: 1px solid #59095B;
-    background-color: #69465C;
+    margin: 30px auto 30px auto;
+    border: 1px solid var(--dark-purple);
+    background-color:var(--light-purple);;
 }
 
 #softskills
@@ -250,12 +257,12 @@ nav>ul>li>a:hover
     left:-170px;
     width: 500px;
     height: 40px;
-    background-color: #69465C;
-    color: white;
+    background-color:var(--light-purple);;
+    color:var(--text-color);
     transform: rotate(45deg);
     transition: 2s all;
     overflow: hidden;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 15px var(--dark);
     cursor: pointer;
 }
 
@@ -266,22 +273,20 @@ nav>ul>li>a:hover
     left:-150px;
     width: 500px;
     height: 40px;
-    background-color: #69465C;
-    color: white;
+    background-color:var(--light-purple);;
+    color:var(--text-color);
     transform: rotate(45deg);
     transition: 2s all;
     overflow: hidden;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 15px var(--dark);
     cursor: pointer;
 } 
-
 
 #experiences
 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #69465c00;
     display: flex;
     flex-direction: column;
     text-align: center;  
@@ -289,7 +294,7 @@ nav>ul>li>a:hover
 
 #softskills>.ste:hover,#technos>.ste:hover
 {
-    color: black;
+    color: var(--dark);
 }
 
 #softskills .p, #technos .p
@@ -469,8 +474,6 @@ nav>ul>li>a:hover
 .modal 
 {
     display: flex;
-    border:5px solid #59095B ;  
-    border-radius: 5px;
     min-width: 50vw;
     max-width:80vw;
     min-height: 45vh;
@@ -480,10 +483,16 @@ nav>ul>li>a:hover
     left: 50%;
     transform:translate(-50%,-50%);
     text-align: center;
-    color: white;
-    background:black;
+    color:var(--text-color);
+    background-color:var(--dark); 
+    border:5px solid var(--dark-purple);
     z-index: 65;
     display:none;
+}
+
+.modal h3
+{
+    margin-top :20px;
 }
 
 .modal p
@@ -498,11 +507,11 @@ nav>ul>li>a:hover
     line-height: 30px;
     vertical-align: middle;
     text-align: center;
-    color: white;
+    color:var(--text-color);
     width: 30px;
     height: 30px;
-    border:5px solid #59095B;
-    background-color: black;
+    border:5px solid var(--dark-purple);
+    background-color: var(--dark);
     border-radius: 20px;
     position: absolute;
     right:-15px;
@@ -512,6 +521,7 @@ nav>ul>li>a:hover
 }
 
 /************************************** MOODBOARD **************************************/
+
 #mood-content
 {  
     padding-top: 50px;
@@ -526,7 +536,6 @@ nav>ul>li>a:hover
     height: 300px;
     margin: 20px auto;
     display: flex;
-    background-color: white;
 }  
 
 .mood
@@ -651,6 +660,7 @@ nav>ul>li>a:hover
 {
     background-image: url(./img-moodboard/triskel.png);
 }
+
 /************************************ INSPIRATION ************************************/
 
 .content
@@ -660,7 +670,7 @@ nav>ul>li>a:hover
     height: 240px;
     min-height: 160px;
     margin: 20px auto;
-    background-color:#69465C;
+    background-color:var(--light-purple);;
     display: flex;
 }
 
@@ -687,9 +697,8 @@ nav>ul>li>a:hover
     text-align: end;
 }
 
-
-
 /************************************** CONTACT **************************************/
+
 #section-contact
 {
     display: flex;
@@ -698,7 +707,7 @@ nav>ul>li>a:hover
     justify-content: center;
     width: 100%;
     height: 100%;
-    color: white; 
+    color: var(--text-color); 
     background-image: url(./img/clavier1.jpg);
     background-repeat:no-repeat;
     background-size: cover;
@@ -711,7 +720,6 @@ form
     padding : 125px 0;
 }
 
-
 form textarea
 {
     width: 180px;
@@ -721,6 +729,3 @@ form input,textarea
 {
     padding: 5px;
 }
-
-
-/************************************** FOOTER **************************************/
