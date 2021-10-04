@@ -76,6 +76,11 @@ h2
     color: white;
 }
 
+h3
+{
+    margin : 30px 0;
+}
+
 .fab, .fas
 {
     width: 100px;
@@ -87,7 +92,7 @@ h2
     color: white;
     width: 100px;
     border-radius: 3px;
-    margin-bottom: 20px;
+    margin:0 20px 20px 20px;
     text-align:center;
 }
 
@@ -355,7 +360,7 @@ nav>ul>li>a:hover
     grid-column-start: 4; 
     grid-column-end: 5; 
     grid-row-start: 1; 
-    grid-row-end: 4;
+    grid-row-end: 3;
 }
 
 #cel4
@@ -430,6 +435,15 @@ nav>ul>li>a:hover
     grid-row-end: 6;
 }
 
+#cel12
+{
+    background-image: url(./img/portfolioV2.png);
+    grid-column-start:4; 
+    grid-column-end:4; 
+    grid-row-start:3; 
+    grid-row-end: 4;
+}
+
 #overlay 
 {	
     position:fixed;
@@ -442,27 +456,30 @@ nav>ul>li>a:hover
     display:none;
 }
 
-#modal 
+.modal 
 {
+    display: flex;
     border:5px solid #59095B ;  
     border-radius: 5px;
     min-width: 50vw;
     max-width:80vw;
-    min-height: 50vh;
-    max-height: 80vh;
+    min-height: 45vh;
+    max-height: 50vh;
     position: fixed;
     top: 50%; 
     left: 50%;
     transform:translate(-50%,-50%);
+    text-align: center;
     color: white;
     background:black;
-    /* display:flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center; */
     z-index: 65;
     display:none;
-    text-align: center;
+}
+
+.modal p
+{
+    margin:0;
+    margin-bottom: 50px;
 }
 
 .close
@@ -484,13 +501,151 @@ nav>ul>li>a:hover
     cursor: pointer;
 }
 
+/************************************** MOODBOARD **************************************/
 
+#moods
+{
+    display: inline-block;
+    background-color:rgb(255, 255, 255);
+    width: 1195px;
+    height: 200px;
+    transition: 0.5s all;
+    margin: 0 auto;
+}                                    
 
+.mood
+{
+    background-position: center;
+    background-size: cover;
+    width:45px;
+    height: 200px;
+    display: inline-block;
+    margin: 0!important;
+    padding:0!important;
+    box-shadow: 0 0 20px black;
 
+    transition: 0.5s all;
+}
 
+.celgrid-mood-to-left
+{
+    width:250px;
+}
 
+.celgrid-mood-to-right
+{
+    width:250px;
+}
 
+#mood-hope
+{
+    background-image: url(./img-moodboard/hope.png);
+}
 
+#mood-bee
+{
+    background-image: url(./img-moodboard/bee.png);
+}
+
+#mood-big-waterfall
+{
+    background-image: url(./img-moodboard/big-waterfall.png);
+}
+
+#mood-butterfly
+{
+    background-image: url(./img-moodboard/butterfly.png);
+}
+
+#mood-cat
+{
+    background-image: url(./img-moodboard/cat.png);
+}
+
+#mood-double-waterfall
+{
+    background-image: url(./img-moodboard/double-waterfall.png);
+}
+
+#mood-fail
+{
+    background-image: url(./img-moodboard/fail.png);
+}
+
+#mood-glans
+{
+    background-image: url(./img-moodboard/glans.png);
+}
+
+#mood-other
+{
+    background-image: url(./img-moodboard/other.png);
+}
+
+#mood-balanced
+{
+    background-image: url(./img-moodboard/balanced.png);
+}
+
+#mood-humor
+{
+    background-image: url(./img-moodboard/humor.png);
+}
+
+#mood-I-learn
+{
+    background-image: url(./img-moodboard/I-learn.png);
+}
+
+#mood-landscape
+{
+    background-image: url(./img-moodboard/landscape.png);
+}
+
+#mood14
+{
+    background-image: url(./img-moodboard/little-waterfall.png);
+}
+
+#mood15
+{
+    background-image: url(./img-moodboard/music.png);
+}
+
+#mood16
+{
+    background-image: url(./img-moodboard/hammock.png);
+}
+
+#mood17
+{
+    background-image: url(./img-moodboard/river.png);
+}
+
+#mood18
+{
+    background-image: url(./img-moodboard/strong.png);
+}
+
+#mood19
+{
+    background-image: url(./img-moodboard/tipi.png);
+}
+
+#mood20
+{
+    background-image: url(./img-moodboard/tree-heart.png);
+}
+
+#mood21
+{
+    background-image: url(./img-moodboard/musicvintage.png);
+}
+
+#mood22
+{
+    background-image: url(./img-moodboard/triskel.png);
+}
 
 
 /************************************** CONTACT **************************************/
@@ -526,43 +681,5 @@ form input,textarea
     padding: 5px;
 }
 
-/************************************** MOODBOARD **************************************/
-.slide 
-{
-    width: 00vw;
-    height: auto;
-}
-
-.wrapper 
-{
-    display: flex;
-    flex-direction: row;
-    width: 200vw;
-    transform: rotate(90deg) translateY(-200vh);
-    transform-origin: top left;
-}
-
-.outer-wrapper 
-{
-    width: 200vh;
-    height: 200vw;
-    transform: rotate(-90deg) translateX(-200vh);
-    transform-origin: top left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar 
-{
-    display: none;
-}
-
-.slide img 
-{
-    width: 20vw;
-}
 
 /************************************** FOOTER **************************************/

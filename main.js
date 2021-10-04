@@ -55,10 +55,53 @@ function openModal(id)
     
 }
 
-function closeModal()
+function closeModal(id)
 {
-    document.getElementById("modal").style.display = "none";
+    document.getElementById(id).style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }
 
+function moodsCreate()
+{
+    console.log("moodsCreate();");
 
+    let m =['hope','bee','big-waterfall','butterfly','cat','double-waterfall','fail','glans','other','balanced','humor','I-learn','landscape','little-waterfall','music','hammock','river','strong','tipi','tree-heart','musicvintage','triskel'];
+    
+    let n = 0;
+    m.forEach(id =>
+    {
+        let e = document.createElement("div");
+        e.id = "mood-" + id;
+        e.className="mood";
+        e.style.backgroundImage = "url(./img-moodboard/"+id+".png)";
+        if(n < m.length)
+        {
+            e.setAttribute("onmouseover","moodPushToRight('mood-"+id+"')");
+            e.setAttribute("onmouseout","moodPushToRight('mood-"+id+"')");
+        }
+        else
+        {
+            e.setAttribute("onmouseover","moodPushToLeft('mood-"+id+"')");
+            e.setAttribute("onmouseout","moodPushToLeft('mood-"+id+"')");
+        }
+
+        document.getElementById("moods").appendChild(e);
+
+        n++;
+    });
+}
+
+function moodPushToRight(id)
+{
+    let e = document.getElementById(id);
+    if(e.classList.contains("celgrid-mood-to-right") == true)
+    {
+        e.classList.remove("celgrid-mood-to-right");
+        document.getElementById("moods").style.textAlign = 'left';
+    }
+    else
+    {
+        e.classList.add("celgrid-mood-to-right");
+        document.getElementById("moods").style.textAlign = 'left';
+    }  
+}

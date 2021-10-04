@@ -19,45 +19,76 @@
             <ul>
                 <li><a aria-current="page" href="index.html">Accueil</a></li>
                 <li><a href="projets.html">Projets</a></li>
-                <li><a href="moodboard.html">Moodboard</a></li>
+                <li><a href="moodboard.html">Moodboard & inspiration</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <div class="title-section">
-            <h2>Ce que je suis, ce qui me définit, mes centres d'intérêts</h2>
-        </div>
-        </div>
-        <section class="outer-wrapper mt-5">
-            <div class="wrapper">
-                <div class="slide grid" data-masonry='{ "itemSelector": ".grid-item"}'>
-                    <img class="grid-item" src="img-moodboard/river.png" alt="">
-                    <img class="grid-item" src="img-moodboard/strong.png" alt="">
-                    <img class="grid-item" src="img-moodboard/tree-heart.png" alt="">
-                    <img class="grid-item" src="img-moodboard/tipi.png" alt="">
-                    <img class="grid-item" src="img-moodboard/triskel.png" alt="">
-                    <img class="grid-item" src="img-moodboard/balanced.png" alt="">
-                    <img class="grid-item" src="img-moodboard/bee.png" alt="">
-                    <img class="grid-item" src="img-moodboard/double-waterfall.png" alt="">
-                    <img class="grid-item" src="img-moodboard/glans.png" alt="">
-                    <img class="grid-item" src="img-moodboard/cat.png" alt="">
-                    <img class="grid-item" src="img-moodboard/hammock.png" alt="">
-                    <img class="grid-item" src="img-moodboard/music.png" alt="">
-                    <img class="grid-item" src="img-moodboard/humor.png" alt="">
-                    <img class="grid-item" src="img-moodboard/hope.png" alt="">
-                    <img class="grid-item" src="img-moodboard/big-waterfall.png" alt="">
-                    <img class="grid-item" src="img-moodboard/other.png" alt="">
-                    <img class="grid-item" src="img-moodboard/landscape.png" alt="">
-                    <img class="grid-item" src="img-moodboard/I-learn.png" alt="">
-                    <img class="grid-item" src="img-moodboard/fail.png" alt="">
-                    <img class="grid-item" src="img-moodboard/musicvintage.png" alt="">
-                    <img class="grid-item" src="img-moodboard/butterfly.png" alt="">
-                    <img class="grid-item" src="img-moodboard/little-waterfall.png" alt="">
-                </div>
+        <h2>Ce que je suis, ce qui me définit, mes centres d'intérêts</h2>
+
+        <div id="moods"></div>
+
+        <h1>Mes Inspirations, ma veille</h1>
+        <div class="content">
+            <div>
+                <img src="img/Enzo.jpg" alt="Développeur web, créateur et entrepreneur.">
             </div>
-        </section>
+            <div>
+                <h5>Le designeur du web</h5>
+                <p>Le designer du web de son vrai prénom Enzo Ustariz est un développeur web, créateur et entrepreneur
+                    qui propose sur son site internet des formations sur le développement web.<br>Il a également une
+                    chaine youtube sur laquelle il poste trés régulièrement des petites vidéos tips.</p>
+                <a href="https://www.ecole-du-web.net/" target="_blank" class="btn btn-purple"><i
+                        class="fas fa-link"></i></a>
+                <a href="https://fr.linkedin.com/in/enzo-ustariz-9b517012a" target="_blank" class="btn btn-purple"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/c/LeDesignerduWeb/featured" target="_blank" class="btn btn-purple"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div>
+                <img src="img/clemence.jpg" alt="Chargée de communication Clémence Guillemet">
+            </div>
+            <div>
+                <h5>Clémence Guillemet</h5>
+                <p>Clémence Guillemet est étudiante en Master Management des Stratégies Marketing
+                    et Communication à Reims. elle effectue ses études en alternance à la SNCF au poste de Chargée
+                    de Communication Création de Contenu.<br>Elle propose sur son profil Linkedin des carrousel
+                    simples, efficaces et pleins de conseils. </p>
+                <a href="http://clemenceguillemet.fr/" target="_blank" class="btn btn-purple"><i
+                        class="fas fa-link"></i></a>
+                <a href="https://www.linkedin.com/in/cl%C3%A9mence-guillemet/" target="_blank" class="btn btn-purple"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div>
+                <img src="img/jhon.jpg" alt="Codeur, entrepreuneur et kiffeur">
+            </div>
+            <div class="col-md-8 col-sm-12 mt-5 order-md-1" style="background-color:#ffffff;">
+                <h5 class="card-title">John Taieb</h5>
+                <p class="card-text">John Taieb , anciennement connu sous le nom de John Codeur, est un codeur
+                    entrepreneur qui partage ses connaissances du code sur son site apprendre-a-coder.com. mais
+                    également par le biais de sa chaîne YouTube.<br>Aujourd'hui, il voyage à travers le monde tout en
+                    exerçant sa passion.</p>
+                <a href="https://apprendre-a-coder.com/" target="_blank" class="btn btn-purple"><i
+                        class="fas fa-link"></i></a>
+                <a href="https://www.linkedin.com/in/johntaieb/" target="_blank" class="btn btn-purple"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/channel/UC0FIKAE7xORm6Y91kWbg4cA" target="_blank"
+                    class="btn btn-purple"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        
         <script src="main.js"></script>
+        <script>moodsCreate();</script>
     </main>
 </body>
 
