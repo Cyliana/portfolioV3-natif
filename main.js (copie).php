@@ -1,4 +1,4 @@
-
+<?php header("Content-type: text/javascript"); ?>
 //=============================PAGE ACCUEIL===========================
 
 
@@ -73,11 +73,62 @@ function moodsCreate()
 {
     console.log("moodsCreate();");
 
-    let m =['hope','bee','big-waterfall','other','butterfly','landscape','double-waterfall','fail','glans','balanced','humor','cat','I-learn','little-waterfall','music','hammock','river','strong','tipi','musicvintage','triskel'];
-    
-    let n = 0;
-    m.forEach(id =>
+    <?php
+    $dir = "img-moodboard";
+    $files = scandir($dir);
+
+    $js = "let moods = [";
+    foreach($files as $file)
     {
+        $f = strtolower(explode('.',$file)[0]);
+        $e = strtolower(explode('.',$file)[1]);
+
+        // --- CSS ---
+        if($file != '.' && $file !='..' && is_file("$dir/$file") && ($e == 'jpg' || $e == 'jpeg'))
+        {
+            $js .= "\"$file\",";
+        }
+
+        // --- FICHIERS ---
+        if(!file_exists("$dir/$f.png"))
+            if($file != '.' && $file !='..' && is_file("$dir/$file") && ($e == 'jpg' || $e == 'jpeg'))
+            {
+                $src = imagecreatefromjpeg("$dir/$file");
+                $dst = imagecreatetruecolor(250,250);
+
+                $imgW = imagesx($src);
+                $imgH = imagesy($src);
+
+                $ox = 0;
+                $oy = 0;
+                $oc = 0;
+
+                if($imgH < $imgW)
+                {
+                    $oc = $imgH;
+                    $ox = floor(($imgW - $imgH) / 2);
+                }
+                if($imgW < $imgH)
+                {
+                    $oc = $imgW;
+                    $oy = floor(($imgH - $imgW) / 2);
+                }
+
+                imagecopyresampled($dst,$src,0,0,$ox,$oy,250,250,$oc,$oc);
+
+                imagepng($dst,"$dir/$f.png");
+            };
+        };
+    
+    $js = substr($js,0,strlen($js)-1).'];';
+    print($js);
+    ?>
+
+    let n = 0;
+    moods.forEach(f =>
+    {
+        let id = f.split('.')[0];
+        console.log(id);
         let e = document.createElement("div");
         e.id = "mood-" + id;
         e.className="mood";

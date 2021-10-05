@@ -1,3 +1,4 @@
+<?php header("Content-type: text/css"); ?>
 /************************************** GENERAL **************************************/
 
 @font-face 
@@ -555,91 +556,25 @@ nav>ul>li>a:hover
     flex-grow:8;
 }
 
+<?php
+    $dir = "img-moodboard";
+    $files = scandir($dir);
 
-#mood-hope
-{
-    background-image: url(./img-moodboard/hope.jpg);
-}
+    $css = '';
+    foreach($files as $file)
+    {
+        $f = strtolower(explode('.',$file)[0]);
+        $e = strtolower(explode('.',$file)[1]);
+        if("$dir/$file" != '.' && "$dir/$file" !='..' && is_file("$dir/$file") && $e == "png")
+        {
 
-#mood-big-waterfall
-{
-    background-image: url(./img-moodboard/big-waterfall.jpg);
-}
-
-#mood-butterfly
-{
-    background-image: url(./img-moodboard/butterfly.JPG);
-}
-
-#mood-cat
-{
-    background-image: url(./img-moodboard/cat.jpg);
-}
-
-#mood-landscape
-{
-    background-image: url(./img-moodboard/landscape.JPG);
-}
-
-#mood-ladybug
-{
-    background-image: url(./img-moodboard/ladybug.jpg);
-}
-
-#mood-learn
-{
-    background-image: url(./img-moodboard/learn.jpg);
-}
-
-#mood-glans
-{
-    background-image: url(./img-moodboard/glans.png);
-}
-
-#mood-little-waterfall
-{
-    background-image: url(./img-moodboard/little-waterfall.jpg);
-}
-
-#mood-music
-{
-    background-image: url(./img-moodboard/music.jpg);
-}
-
-#mood-quotes
-{
-    background-image: url(./img-moodboard/quotes);
-}
-
-#mood-rocks
-{
-    background-image: url(./img-moodboard/rocks);
-}
-
-#mood-saturated
-{
-    background-image: url(./img-moodboard/saturated.jpg);
-}
-
-#mood-sister
-{
-    background-image: url(./img-moodboard/sister.JPG);
-}
-
-#mood-strong
-{
-    background-image: url(./img-moodboard/strong.jpg);
-}
-
-#mood-tree
-{
-    background-image: url(./img-moodboard/tree.jpg);
-}
-
-#mood-triskel
-{
-    background-image: url(./img-moodboard/triskel.JPG);
-}
+            $css .= "#mood-$f {";
+            $css .= "background-image:url(./$dir/$file);";
+            $css .= "}\n";
+        }
+    }
+    print($css);
+?>
 
 /************************************ INSPIRATION ************************************/
 
@@ -695,7 +630,7 @@ nav>ul>li>a:hover
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    min-height: calc(100vh - 50px);
     color: var(--text-color); 
     background-image: url(./img/clavier1.jpg);
     background-repeat:no-repeat;
@@ -704,9 +639,19 @@ nav>ul>li>a:hover
     background-attachment: fixed;
 }
 
-form
+.formulaire 
 {
-    padding : 125px 0;
+
+    min-width : 50%;
+    background-color: var(--light-purple);
+    align-self:center;
+
+}
+
+form 
+{
+    width:200px;
+    margin:auto;
 }
 
 form textarea
@@ -717,4 +662,4 @@ form textarea
 form input,textarea
 {
     padding: 5px;
-}
+} 
