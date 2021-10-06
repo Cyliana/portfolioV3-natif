@@ -556,7 +556,6 @@ nav>ul>li>a:hover
     transition: 0.3s ease-in-out;
     background-size: cover;
     background-position: center;
-
 }
 
 .mood:hover
