@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Mon portfolio de développeuse web : mes projets, les technologies que j'utilise, les « autorités » que je suis.">
-    <title>Amanda Corraire</title>
-    <script src="https://kit.fontawesome.com/d09bd1977e.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="image/png" href="./img/amanda1.png"/>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" media="screen and (max-width: 576px)" href="styles-mobile.css">
-</head>
+<?php
+include("head.php");
+include("header.php");
+?>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a aria-current="page" href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="moodboard.html">Moodboard & inspiration</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-        </nav>
-    </header>
-    
     <main>
         <div class="no-speech">
             <img src="./img/amanda1.png" alt="Une photo de moi.">
@@ -36,12 +14,14 @@
 
         <div class="bloc-cv">
             <p>Cliquez ici pour le télécharger en version PDF :</p>
-            <a href="./doc/cv-amanda-Corraire.zip" class="btn-purple"><i class="fas fa-download"></i></a>
+            <a href="./doc/cv-amanda-corraire.zip" class="btn-purple"><i class="fas fa-download"></i></a>
         </div>
 
         <div id="parcours">
-            <div id="experiences">
-                <h2>< Expériences ></h2><br>
+            <div id="experiences" onclick="showExperiences();">
+                <h2>
+                    < Expériences>
+                </h2><br>
                 <p class="p">2020 / aujourd'hui - OnlineFormaPro <br>Formation pré-qualifiante et formation
                     qualifiante Developpement Web et Web mobile.</p><br>
                 <p class="p">2019/2020 - Renault Trucks - Opératrice <br> Assemblage des radiateurs moteurs</p><br>
@@ -55,7 +35,9 @@
             </div>
 
             <div id="softskills" onclick="showSoftSkills();">
-                <h2>< Softs Skills ></h2><br><br><br>
+                <h2>
+                    < Softs Skills>
+                </h2><br><br><br>
                 <p class="p">Curieuse</p>
                 <p class="p">Rigoureuse</p>
                 <p class="p">Dynamique</p>
@@ -63,7 +45,9 @@
                 <p class="p">Organisée</p>
             </div>
             <div id="technos" onclick="showTechnos();">
-                <h2>< Les technologies ></h2><br>
+                <h2>
+                    < Les technologies>
+                </h2><br>
                 <p class="p">HTML 5</p>
                 <p class="p">CSS 3</p>
                 <p class="p">Javascript</p>
@@ -76,11 +60,9 @@
             </div>
         </div>
     </main>
-    <footer>
-            <p>Amanda Corraire - Portfolio V3 - 2021</p>
-    </footer>
-
-    <script src="main.js"></script>
+    <?php
+    include("footer.php");
+    ?>
 </body>
 
 </html>

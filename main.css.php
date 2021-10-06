@@ -44,7 +44,13 @@ header
     font-family: 'Dubai Light';
     font-size: 20px;
     z-index :100;
+    background-color:var(--dark-purple);
     border-bottom: 1px solid var(--dark);
+}
+
+#burger 
+{
+    display:none;
 }
 
 main 
@@ -166,8 +172,9 @@ nav>ul>li>a:hover
 
 .no-speech 
 {
+    margin-top:50px;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 50px);
     background-image: url(./img/clavier1.jpg);
     background-repeat:no-repeat;
     background-size: cover;
@@ -175,19 +182,33 @@ nav>ul>li>a:hover
     background-attachment: fixed;
     overflow: hidden;
     display:flex;
-    justify-content: center;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+.no-speech img
+{
+    display:block;
+    width: 300px;
+    height: 300px;
+    text-align:center;
+    border-radius:200px;
+    border: 2px solid var(--dark);
+    opacity: 0.6;
+    margin:50px;
 }
 
 #essential 
 {
+    display:block;
+    width:90%;
     font-family: 'Gabriola';
     font-size: 3em;
     text-align: center;
-    width: 100%;
-    margin-top: 70vh;
     overflow: hidden;
+    
     line-height: initial;
-
     background: linear-gradient(90deg,#fff,#59095B,#fff,#59095B,#fff,#59095B,#fff);
     background-repeat:round;
     background-size: 90%;
@@ -210,17 +231,6 @@ nav>ul>li>a:hover
     }
 }
 
-.no-speech img
-{
-    position:absolute;
-    width: 300px;
-    height: 300px;
-    top: 100px;
-    border-radius:200px;
-    border: 2px solid var(--dark);
-    opacity: 0.6;
-}
-
 /************************************** CV - PARCOURS **************************************/
 
 .bloc-cv 
@@ -239,8 +249,8 @@ nav>ul>li>a:hover
 {
     position: relative;
     max-width: 1000px;
-    height:570px;
-    max-height:570px;
+    min-height:580px;
+    max-height:580px;
     color:var(--text-color);
     display: flex;
     flex-flow: column;
@@ -641,17 +651,23 @@ nav>ul>li>a:hover
 
 .formulaire 
 {
-
-    min-width : 50%;
+    min-width : 40%;
+    max-width : 50%;
     background-color: var(--light-purple);
     align-self:center;
-
 }
 
 form 
 {
     width:200px;
     margin:auto;
+    padding:40px;
+}
+
+form>button 
+{
+    margin:0 !important;
+    padding:5px;
 }
 
 form textarea
@@ -663,3 +679,5 @@ form input,textarea
 {
     padding: 5px;
 } 
+
+

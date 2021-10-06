@@ -2,45 +2,141 @@
 //=============================PAGE ACCUEIL===========================
 
 
-function showSoftSkills()
+if (window.matchMedia("(max-width: 480px)").matches) 
 {
-    let e = document.getElementById("softskills");
+    function showSoftSkills()
+    {
+        let e = document.getElementById("softskills");
 
-    if(e.style.transform == "rotate(0deg)")
-    {
-        e.style.transform = "rotate(45deg)";
-        e.style.left = "-170px";
-        e.style.bottom = "55px";
-        e.style.height = "40px";
+        if(e.style.height == "calc(100% - 80px)")
+        {
+            e.style.bottom = "0px";
+            e.style.height = "40px";
+        }
+        else
+        {
+            e.style.bottom = "0px";
+            e.style.height = "calc(100% - 80px)";
+            e.style.zIndex = "100";
+        }
     }
-    else
+
+    function showTechnos()
     {
-        e.style.transform = "rotate(0deg)";
-        e.style.left = "0px";
-        e.style.bottom = "0px";
-        e.style.height = "calc(100% - 50px)";
+        let e = document.getElementById("technos");
+
+        if(e.style.height == "calc(100% - 80px)")
+        {
+            e.style.bottom = "40px";
+            e.style.height = "40px";
+        }
+        else
+        {
+            e.style.bottom = "40px";
+            e.style.height = "calc(100% - 80px)";
+        }
     }
+
+    function showExperiences()
+    {
+        let e = document.getElementById("experiences");
+        let p = document.getElementById("parcours");
+
+        if(e.style.height == "calc(100% - 80px)")
+        {
+            e.style.bottom = "80px";
+            e.style.height = "40px";
+            p.style.height = "120px";
+        }
+        else
+        {
+            e.style.bottom = "80";
+            e.style.height = "calc(100% - 80px)";
+            p.style.height = "1000px";
+        }
+    }
+
+    function showMenu()
+    {
+        let e = document.getElementById("menu");
+
+        if(e.style.display == "block")
+        {
+            e.style.display = "none";
+        }
+        else
+        {
+            e.style.display = "block";
+        }
+    }
+
+
+
+} 
+
+else 
+{
+    function showSoftSkills()
+    {
+        let e = document.getElementById("softskills");
+
+        if(e.style.transform == "rotate(0deg)")
+        {
+            e.style.transform = "rotate(45deg)";
+            e.style.left = "-170px";
+            e.style.bottom = "55px";
+            e.style.height = "40px";
+        }
+        else
+        {
+            e.style.transform = "rotate(0deg)";
+            e.style.left = "0px";
+            e.style.bottom = "0px";
+            e.style.height = "calc(100% - 50px)";
+        }
+    }
+
+    function showTechnos()
+    {
+        let e = document.getElementById("technos");
+
+        if(e.style.transform == "rotate(0deg)")
+        {
+            e.style.transform = "rotate(45deg)";
+            e.style.left = "-150px";
+            e.style.bottom = "90px";
+            e.style.height = "40px";
+        }
+        else
+        {
+            e.style.transform = "rotate(0deg)";
+            e.style.left = "500px";
+            e.style.bottom = "0px";
+            e.style.height = "calc(100% - 50px)";
+        }
+    }
+
 }
 
-function showTechnos()
-{
-    let e = document.getElementById("technos");
 
-    if(e.style.transform == "rotate(0deg)")
-    {
-        e.style.transform = "rotate(45deg)";
-        e.style.left = "-150px";
-        e.style.bottom = "90px";
-        e.style.height = "40px";
-    }
-    else
-    {
-        e.style.transform = "rotate(0deg)";
-        e.style.left = "500px";
-        e.style.bottom = "0px";
-        e.style.height = "calc(100% - 50px)";
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //============================PROJETS================================
 
