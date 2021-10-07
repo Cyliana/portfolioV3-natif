@@ -43,9 +43,9 @@ header
     height: 50px;
     font-family: 'Dubai Light';
     font-size: 20px;
-    z-index :100;
     background-color:var(--dark-purple);
-    border-bottom: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark); 
+    z-index :100;
 }
 
 #burger 
@@ -245,6 +245,11 @@ nav>ul>li>a:hover
     color:var(--text-color);
 }
 
+.bloc-cv>p 
+{
+    margin-bottom:10px;
+}
+
 #parcours
 {
     position: relative;
@@ -275,6 +280,7 @@ nav>ul>li>a:hover
     overflow: hidden;
     box-shadow: 0 0 15px var(--dark);
     cursor: pointer;
+    z-index:3;
 }
 
 #technos
@@ -291,6 +297,7 @@ nav>ul>li>a:hover
     overflow: hidden;
     box-shadow: 0 0 15px var(--dark);
     cursor: pointer;
+    z-index:2;
 } 
 
 #experiences
@@ -301,6 +308,7 @@ nav>ul>li>a:hover
     display: flex;
     flex-direction: column;
     text-align: center;  
+    z-index:1;
 }
 
 #softskills>.ste:hover,#technos>.ste:hover
@@ -329,8 +337,26 @@ nav>ul>li>a:hover
 #projectcontent
 {
     width: 100%;
-    position: absolute;
     padding-top: 50px;
+}
+
+#container
+{
+    width:calc(100% - 80px);
+    height:calc(100vh - 150px);
+    margin:auto;
+    display:flex;
+}
+
+#gridcontent
+{
+    align-self:center;
+    width:100%;
+    margin: auto;
+    display: grid;                                      /*mise en place du grid*/
+    grid-template-rows: 100px 100px 100px 100px 100px;  /*hauteur des lignes*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;             /*largeur des colonnes*/                           
+    grid-gap: 10px;                                     /*espaces entre les éléments*/
 }
 
 .celgrid
@@ -346,20 +372,6 @@ nav>ul>li>a:hover
 {
     -webkit-filter: grayscale(0);
 	filter: grayscale(0);
-}
-
-#gridcontent
-{
-    min-width: 300px;
-    max-width: 1000px;
-    height: 500px;
-    max-height:500px;
-    margin:auto;
-    padding: 120px 0 60px 0;
-    display: grid;                                      /*mise en place du grid*/
-    grid-template-rows: 100px 100px 100px 100px 100px;  /*hauteur des lignes*/
-    grid-template-columns: 1fr 1fr 1fr 1fr;             /*largeur des colonnes*/                           
-    grid-gap : 10px;                                     /*espaces entre les éléments*/
 }
 
 #cel1
@@ -478,25 +490,24 @@ nav>ul>li>a:hover
     bottom:0;
     right:0;
     background-color: hsla(0, 0%, 0%, 0.9);
-    z-index: 60;
+    z-index: 4;
     display:none;
 }
 
 .modal 
 {
-    display: flex;
-    min-width: 70%;
-    max-width:50%;
-    padding: 15px;
-    position: fixed;
-    top: 50%; 
-    left: 50%;
-    transform:translate(-50%,-50%);
+    width : 290px;
+    padding:20px;
     text-align: center;
     color:var(--text-color);
     background-color:var(--dark); 
     border:5px solid var(--dark-purple);
-    z-index: 65;
+
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform:translate(-50%,-50%);
+    z-index: 5;
     display:none;
 }
 
@@ -541,8 +552,8 @@ nav>ul>li>a:hover
 
 #moods
 {
-    max-width: 1000px;
-    min-width:1000px;
+    min-width:760px;
+    max-width:1000px;
     height: 300px;
     margin: 20px auto;
     display: flex;
@@ -590,12 +601,14 @@ nav>ul>li>a:hover
 .content
 {
     max-width: 1000px;
-    min-width:1000px;
+    min-width:760px;
     height: 240px;
-    min-height: 160px;
+    min-height: 300px;
     margin: 20px auto;
     background-color:var(--light-purple);;
     display: flex;
+    align-items:center;
+    justify-content: space
 }
 
 .content img
@@ -605,14 +618,9 @@ nav>ul>li>a:hover
     height: 200px;
 }
 
-.content h3
-{
-    padding:20px;
-}
-
 .content p
 {
-    padding:10px;
+    padding:20px 0;
 }
 
 #clemence
@@ -635,23 +643,25 @@ nav>ul>li>a:hover
 #section-contact
 {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
     justify-content: center;
     width: 100%;
-    min-height: calc(100vh - 50px);
+    height:calc(100vh - 150px);
     color: var(--text-color); 
     background-image: url(./img/clavier1.jpg);
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    overflow-y : scroll;
+    z-index:0;
 }
 
 .formulaire 
 {
-    min-width : 40%;
-    max-width : 50%;
+    width:600px;
+    min-width : 300px;
+    max-width : 600px;
+    margin:auto;
     background-color: var(--light-purple);
     align-self:center;
 }

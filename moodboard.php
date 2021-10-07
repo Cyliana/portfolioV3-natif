@@ -34,7 +34,7 @@ include("header.php");
                 <h3>Clémence Guillemet</h3>
                 <p>Clémence Guillemet est étudiante en Master Management des Stratégies Marketing
                     et Communication à Reims. elle effectue ses études en alternance à la SNCF au poste de Chargée
-                    de Communication Création de Contenu.<br>Elle propose sur son profil Linkedin des carrousel
+                    de Communication Création de Contenu.<br>Elle propose sur son profil Linkedin des carrousels
                     simples, efficaces et pleins de conseils. </p>
                 <a href="http://clemenceguillemet.fr/" target="_blank" class="btn btn-purple"><i class="fas fa-link"></i></a>
                 <a href="https://www.linkedin.com/in/cl%C3%A9mence-guillemet/" target="_blank" class="btn btn-purple"><i class="fab fa-linkedin"></i></a>

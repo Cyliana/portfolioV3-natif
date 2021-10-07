@@ -1,6 +1,7 @@
 h2
 {
     font-size:20px;
+    padding: 5px 0;
 }
 
 /************************************** NAVIGATION **************************************/
@@ -10,6 +11,7 @@ nav
     width: 100%;
     height: 250px;    
     display:none;
+    z-index: 100;
 }
 
 nav>ul
@@ -94,6 +96,7 @@ input, button, submit
     left: 0px;
     width: 100%;
     height: 40px;
+    z-index: 1;
 }
 
 #softskills
@@ -104,6 +107,7 @@ input, button, submit
     width: 100%;
     height: 40px;
     transform: rotate(0deg);
+    z-index: 3;
 }
 
 #technos
@@ -114,6 +118,7 @@ input, button, submit
     width: 100%;
     height: 40px;
     transform: rotate(0deg);
+    z-index: 2;
 } 
 
 #experiences .p
@@ -124,18 +129,6 @@ input, button, submit
 #softskills .p, #technos .p
 {
     font-size:1em;
-}
-
-/************************************** PROJETS **************************************/
-
-#gridcontent
-{
-    width: 300px;
-    max-width: 1000px;
-    height: 500px;
-    max-height:500px;
-    margin: auto;
-    padding-top:180px;
 }
 
 /************************************** MOODBOARD **************************************/
@@ -163,5 +156,38 @@ input, button, submit
 {
     width: 300px;
     height: 200px;
-    flex-grow:25;
+    flex-grow:8;
+}
+
+.content
+{
+    min-width:300px;
+    max-width: 1000px;
+    height: 100%;
+    min-height: 100%;
+    margin: 20px auto;
+    background-color:var(--light-purple);;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom:10px;
+}
+
+.content img
+{
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+#clemence
+{
+    flex-direction: column;
+    text-align: center;
+}
+
+.content a
+{
+    background-color: var(--dark-purple);
 }

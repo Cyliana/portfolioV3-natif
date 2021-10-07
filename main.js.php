@@ -1,8 +1,10 @@
 <?php header("Content-type: text/javascript"); ?>
+
+
 //=============================PAGE ACCUEIL===========================
 
 
-if (window.matchMedia("(max-width: 480px)").matches) 
+if (window.matchMedia("(max-width: 768px)").matches) 
 {
     function showSoftSkills()
     {
@@ -17,7 +19,6 @@ if (window.matchMedia("(max-width: 480px)").matches)
         {
             e.style.bottom = "0px";
             e.style.height = "calc(100% - 80px)";
-            e.style.zIndex = "100";
         }
     }
 
@@ -69,9 +70,6 @@ if (window.matchMedia("(max-width: 480px)").matches)
             e.style.display = "block";
         }
     }
-
-
-
 } 
 
 else 
@@ -120,24 +118,6 @@ else
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //============================PROJETS================================
 
 function openModal(id)
@@ -182,6 +162,7 @@ function moodsCreate()
         // --- CSS ---
         if($file != '.' && $file !='..' && is_file("$dir/$file") && ($e == 'jpg' || $e == 'jpeg'))
         {
+            
             $js .= "\"$file\",";
         }
 
@@ -203,10 +184,11 @@ function moodsCreate()
             }
         }
     }
+
     $js = substr($js,0,strlen($js)-1).'];';
 
     print($js);
-    
+
     ?>
 
     moods.forEach(f =>
