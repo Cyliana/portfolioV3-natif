@@ -65,12 +65,12 @@ footer
     margin: 0;
     padding: 0;
     width: 100%;
-    line-height: 50px;
-    vertical-align: middle;
     height: 50px;
+    line-height: 50px;
+    vertical-align: middle;  
+    text-align: center;
     font-family: 'Dubai Light';
     color:var(--text-color);
-    text-align: center;
     background-color: var(--dark-purple);
     border-top: 1px solid var(--dark);
 }
@@ -346,11 +346,11 @@ nav>ul>li>a:hover
     height:calc(100vh - 150px);
     margin:auto;
     display:flex;
+    
 }
 
 #gridcontent
 {
-    align-self:center;
     width:100%;
     margin: auto;
     display: grid;                                      /*mise en place du grid*/
@@ -513,7 +513,7 @@ nav>ul>li>a:hover
 
 .modal h3
 {
-    margin-top :20px;
+    margin:20px 0px;
 }
 
 .modal p
@@ -552,8 +552,7 @@ nav>ul>li>a:hover
 
 #moods
 {
-    min-width:760px;
-    max-width:1000px;
+    width:90%;
     height: 300px;
     margin: 20px auto;
     display: flex;
@@ -600,8 +599,7 @@ nav>ul>li>a:hover
 
 .content
 {
-    max-width: 1000px;
-    min-width:760px;
+    width: 90%;
     height: 240px;
     min-height: 300px;
     margin: 20px auto;
@@ -658,11 +656,9 @@ nav>ul>li>a:hover
 
 .formulaire 
 {
-    width:600px;
-    min-width : 300px;
-    max-width : 600px;
+    width:50%;
     margin:auto;
-    background-color: var(--light-purple);
+    <!-- background-color: var(--light-purple); -->
     align-self:center;
 }
 

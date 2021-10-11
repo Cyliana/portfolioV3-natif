@@ -187,8 +187,9 @@ function moodsCreate()
 
     $js = substr($js,0,strlen($js)-1).'];';
 
-    print($js);
 
+    print($js);
+    
     ?>
 
     moods.forEach(f =>
