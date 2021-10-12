@@ -197,9 +197,8 @@ function moodsCreate()
         let e = document.createElement("div");
         e.id = "mood-" + id;
         e.className="mood";
-        e.style.backgroundImage = "url(./img-moodboard/"+id+".png)";
+//        e.style.backgroundImage = "url(./img-moodboard/"+id+".png)";
         document.getElementById("moods").appendChild(e);
-
     });
 }
 

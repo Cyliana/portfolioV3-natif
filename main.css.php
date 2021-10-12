@@ -552,6 +552,7 @@ nav>ul>li>a:hover
 
 #moods
 {
+    width: 100%;
     min-width:760px;
     max-width:1000px;
     height: 300px;
@@ -573,12 +574,15 @@ nav>ul>li>a:hover
 {
     width: 400px;
     height: 300px;
-    flex-grow:8;
+    flex-grow:7;
 }
 
 <?php
     $dir = "img-moodboard";
     $files = scandir($dir);
+
+    $tw = 1000;
+    $w = floor($tw / (count($files) - 2));
 
     $css = '';
     foreach($files as $file)
@@ -587,10 +591,22 @@ nav>ul>li>a:hover
         $e = strtolower(explode('.',$file)[1]);
         if("$dir/$file" != '.' && "$dir/$file" !='..' && is_file("$dir/$file") && $e == "png")
         {
-
-            $css .= "#mood-$f {";
-            $css .= "background-image:url(./$dir/$file);";
-            $css .= "}\n";
+            if($tw > 768)
+            {
+                $css .= "#mood-$f {";
+                $css .= "display: none; ";
+                $css .= "background-image:url(./$dir/$file); ";
+                $css .= "}\n";
+                $css .= "@media screen and (min-width: ".$tw."px) { #mood-$f { display: block;} }\n\n";
+                $tw -= $w;
+            }
+            else
+            {
+                $css .= "#mood-$f {";
+                $css .= "display: block; ";
+                $css .= "background-image:url(./$dir/$file); ";
+                $css .= "}\n";
+            }
         }
     }
     print($css);
@@ -652,7 +668,6 @@ nav>ul>li>a:hover
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow-y : scroll;
     z-index:0;
 }
 
@@ -673,7 +688,7 @@ form
     padding:40px;
 }
 
-form>button 
+form>#button 
 {
     margin:0 !important;
     padding:5px;
@@ -689,4 +704,7 @@ form input,textarea
     padding: 5px;
 } 
 
-
+::-webkit-scrollbar
+{
+    display:none;
+}

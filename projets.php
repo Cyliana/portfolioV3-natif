@@ -102,7 +102,7 @@ include("header.php");
                 <div class="modal" id="modal10">
                     <p class="close" onclick="closeModal('modal10');">X</p>
                     <h3>Logo Playstation</h3>
-                    <p>Réalisation d'un casse brique en JS objet</p>
+                    <p>Réalisation du logo playstation en CSS3.<br>Le background de chaque élèments doit être transparent de façons à pouvoir changer la couleur de fond.</p>
                     <a href="https://amandat.promo-73.codeur.online/challenge-play/" target="_blank" class="btn-purple"><i class="fas fa-link"></i></a>
                     <a href="https://github.com/Cyliana/challenge-play/" target="_blank" class="btn-purple"><i class="fab fa-github"></i></a>
                 </div>
