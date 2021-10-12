@@ -1,3 +1,4 @@
-# PortfolioV2
+# PortfolioV3
 
-- Refonte complète du portfolio avec bootstrap et en coherence avec mon cv 
+- Réalisaion de mon portfolio en n'utilisant que le langage natif .
+- Utilisation de html , css, javascript, php.
