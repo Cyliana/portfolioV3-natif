@@ -9,11 +9,11 @@
         </div>
         <div id="section-contact">
             <div class="formulaire">
-                <form  method='POST' action="contact.php?sendmail">
+                <form  method='POST' action="mail.php">
                     <label>Votre nom</label></br>
-                    <input type="text" name ="user_firstname"></br>
+                    <input type="text" name ="user_firstname" pattern="[a-z][A-Z]"></br>
                     <label>Votre prenom</label></br>
-                    <input type="text" name ="user_name"></br>
+                    <input type="text" name ="user_name" pattern="[a-z][A-Z]" ></br>
                     <label>Votre e-mail</label></br>
                     <input type="email" name="user_mail" placeholder="nom.prenom@exemple.fr" ></br>
                     <label>Votre message</label></br>

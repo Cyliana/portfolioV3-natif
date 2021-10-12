@@ -218,11 +218,11 @@ function mail()
             {
                 if(ajax.statusText == 'OK')
                 {
-                    ajax = responseText;
+                   document.getElementById("formulaire").innerHTML = ajax.responseText;
                 }
                 else
                 {
-                   alert("Erreur "+ajax.status);
+                   alert("Erreur");
                 }
             }
         }
