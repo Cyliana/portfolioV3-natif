@@ -342,8 +342,8 @@ nav>ul>li>a:hover
 
 #container
 {
+    padding: 50px 0px;
     width:calc(100% - 80px);
-    height:calc(100vh - 150px);
     margin:auto;
     display:flex;
     

@@ -1,9 +1,7 @@
-<?php
-include("head.php");
-include("header.php");
-?>
-
+<?php include("head.php"); ?>
 <body>
+    <?php include("header.php"); ?>
+
     <main>
         <div class="no-speech">
             <img src="./img/amanda1.png" alt="Une photo de moi.">

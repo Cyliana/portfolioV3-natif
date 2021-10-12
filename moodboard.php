@@ -1,9 +1,6 @@
-<?php
-include("head.php");
-include("header.php");
-?>
-
+<?php include("head.php"); ?>
 <body>
+    <?php include("header.php"); ?>
     <main>
         <div id="mood-content">
             <h2>Ce que je suis, ce qui me définit, mes centres d'intérêts</h2>

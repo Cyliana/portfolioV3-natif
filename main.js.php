@@ -1,6 +1,5 @@
 <?php header("Content-type: text/javascript"); ?>
 
-
 //=============================PAGE ACCUEIL===========================
 
 
@@ -203,3 +202,29 @@ function moodsCreate()
     });
 }
 
+//============================ CONTACT ==============================
+
+
+function mail()
+{
+    let data = new FormData(form);
+    let ajax = new XMLHttpRequest();
+
+    ajax.open("POST","mail.php", true);
+
+    ajax.onreadystatechange = () =>
+        {
+            if (ajax.readyState == XMLHttpRequest.DONE)
+            {
+                if(ajax.statusText == 'OK')
+                {
+                    ajax = responseText;
+                }
+                else
+                {
+                   alert("Erreur "+ajax.status);
+                }
+            }
+        }
+        ajax.send(data);
+}
