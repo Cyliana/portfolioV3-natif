@@ -205,6 +205,7 @@ function moodsCreate()
 //============================ CONTACT ==============================
 
 
+
 function mail()
 {
     let data = new FormData(form);
@@ -227,4 +228,6 @@ function mail()
             }
         }
         ajax.send(data);
-}
+} 
+
+

@@ -1,5 +1,10 @@
 <?php header("Content-type: text/css"); ?>
 /************************************** GENERAL **************************************/
+*
+{
+    margin:0;
+    padding:0;
+}
 
 @font-face 
 {
@@ -16,17 +21,12 @@
     font-weight: normal;
     src: local('Dubai Light'), url('fonts/dubai-light.woff') format('woff');
 }
-*
-{
-    margin:0;
-    padding:0;
-}
 
 html, body
 {
     --dark : black;
     --dark-purple : #59095B;
-    --light-purple : #69465C;
+    --light-purple : #69465c;
 
     --text-color : white;
 
@@ -117,7 +117,7 @@ h3
     color:var(--text-color);
     width: 100px;
     border-radius: 3px;
-    margin:0 20px 20px 20px;
+    margin-right: 20px;
     text-align:center;
 }
 
@@ -250,8 +250,15 @@ nav>ul>li>a:hover
     margin-bottom:10px;
 }
 
+#parcours>div>h2 
+{
+    background-color: var(--light-purple);
+}
+
+
 #parcours
 {
+    border-radius:30px;
     position: relative;
     max-width: 1000px;
     min-height:580px;
@@ -262,8 +269,7 @@ nav>ul>li>a:hover
     justify-content: center; 
     overflow: hidden;
     margin: 30px auto 30px auto;
-    border: 1px solid var(--dark-purple);
-    background-color:var(--light-purple);;
+    border: 1px solid var(--light-purple);
 }
 
 #softskills
@@ -273,14 +279,15 @@ nav>ul>li>a:hover
     left:-170px;
     width: 500px;
     height: 40px;
-    background-color:var(--light-purple);;
     color:var(--text-color);
+    background-color: var(--dark);
     transform: rotate(45deg);
     transition: 2s all;
     overflow: hidden;
     box-shadow: 0 0 15px var(--dark);
+    border-right: 1px solid var(--light-purple);
     cursor: pointer;
-    z-index:3;
+    z-index:2;
 }
 
 #technos
@@ -290,12 +297,13 @@ nav>ul>li>a:hover
     left:-150px;
     width: 500px;
     height: 40px;
-    background-color:var(--light-purple);;
     color:var(--text-color);
+    background-color: var(--dark);
     transform: rotate(45deg);
     transition: 2s all;
     overflow: hidden;
     box-shadow: 0 0 15px var(--dark);
+    border-left: 1px solid var(--light-purple);
     cursor: pointer;
     z-index:2;
 } 
@@ -309,11 +317,6 @@ nav>ul>li>a:hover
     flex-direction: column;
     text-align: center;  
     z-index:1;
-}
-
-#softskills>.ste:hover,#technos>.ste:hover
-{
-    color: var(--dark);
 }
 
 #softskills .p, #technos .p
@@ -338,6 +341,7 @@ nav>ul>li>a:hover
 {
     width: 100%;
     padding-top: 50px;
+
 }
 
 #container
@@ -497,11 +501,11 @@ nav>ul>li>a:hover
 .modal 
 {
     width : 290px;
-    padding:20px;
+    padding:30px;
     text-align: center;
     color:var(--text-color);
     background-color:var(--dark); 
-    border:5px solid var(--dark-purple);
+    border:5px solid var(--light-purple);
 
     position: fixed;
     top: 50%; 
@@ -531,7 +535,7 @@ nav>ul>li>a:hover
     color:var(--text-color);
     width: 30px;
     height: 30px;
-    border:5px solid var(--dark-purple);
+    border:5px solid var(--light-purple);
     background-color: var(--dark);
     border-radius: 20px;
     position: absolute;
@@ -552,11 +556,12 @@ nav>ul>li>a:hover
 
 #moods
 {
-    width:90%;
+    width:70%;
     height: 300px;
     margin: 20px auto;
     display: flex;
 }  
+
 
 .mood
 {
@@ -572,7 +577,7 @@ nav>ul>li>a:hover
 {
     width: 400px;
     height: 300px;
-    flex-grow:7;
+    flex-grow:6;
 }
 
 <?php
@@ -614,14 +619,16 @@ nav>ul>li>a:hover
 
 .content
 {
-    width: 90%;
+    width: 70%;
     height: 240px;
     min-height: 300px;
     margin: 20px auto;
-    background-color:var(--light-purple);;
     display: flex;
     align-items:center;
-    justify-content: space
+    border-radius:30px;
+    border :1px solid var(--light-purple);
+    color:white;
+
 }
 
 .content img
@@ -633,7 +640,7 @@ nav>ul>li>a:hover
 
 .content p
 {
-    padding:20px 0;
+    padding: 20px 10px 20px 0px;
 }
 
 #clemence
@@ -642,15 +649,17 @@ nav>ul>li>a:hover
     text-align: end;
 }
 
-.content a
+#clemence>div>p 
 {
-    background-color: var(--dark-purple);
+    padding: 20px 0px 20px 10px ;
 }
 
-.content .fa-youtube:hover, .content .fa-linkedin:hover, .content .fa-link:hover
+#clemence>div>a.btn-purple
 {
-    color: var(--dark)
+    margin-right:0;
+    margin-left :20px;
 }
+
 /************************************** CONTACT **************************************/
 
 #section-contact
@@ -672,8 +681,9 @@ nav>ul>li>a:hover
 {
     width:50%;
     margin:auto;
-    <!-- background-color: var(--light-purple); -->
     align-self:center;
+    border-radius:30px;
+    overflow:scroll;
 }
 
 form 

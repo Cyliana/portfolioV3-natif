@@ -1,3 +1,4 @@
+<?php header("Content-type: text/css"); ?>
 h2
 {
     font-size:20px;
@@ -74,16 +75,6 @@ h2
 {
     width : 60%;
     padding:30px;
-    text-align: center;
-    color:var(--text-color);
-    background-color:var(--dark); 
-    border:5px solid var(--dark-purple);
-    position: fixed;
-    top: 50%; 
-    left: 50%;
-    transform:translate(-50%,-50%);
-    z-index: 5;
-    display:none;
 }
 
 .modal h3
@@ -130,7 +121,6 @@ h2
     height: 100%;
     min-height: 100%;
     margin: 20px auto;
-    background-color:var(--light-purple);;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,9 +139,4 @@ h2
 {
     flex-direction: column;
     text-align: center;
-}
-
-.content a
-{
-    background-color: var(--dark-purple);
 }

@@ -11,9 +11,9 @@
             <div class="formulaire">
                 <form  method='POST' action="mail.php">
                     <label>Votre nom</label></br>
-                    <input type="text" name ="user_firstname" pattern="[a-z][A-Z]"></br>
+                    <input type="text" name ="user_firstname"></br>
                     <label>Votre prenom</label></br>
-                    <input type="text" name ="user_name" pattern="[a-z][A-Z]" ></br>
+                    <input type="text" name ="user_name"></br>
                     <label>Votre e-mail</label></br>
                     <input type="email" name="user_mail" placeholder="nom.prenom@exemple.fr" ></br>
                     <label>Votre message</label></br>

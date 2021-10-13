@@ -1,8 +1,10 @@
 <?php
-    $firstname =    $_POST['user_firstname'];
-    $name =         $_POST['user_name'];
-    $email =        $_POST['user_mail'];
-    $txt =          $_POST['user_message'];
+    
+    $firstname =    strip_tags($_POST['user_firstname']);
+    $name =         strip_tags($_POST['user_name']);
+    $email =        strip_tags($_POST['user_mail']);
+    $txt =          strip_tags($_POST['user_message']);
+
 
     $retour = mail('a.taddei@codeur.online', $firstname.' '.$name, $txt, 'From :'.$email);
     if ($retour) 

@@ -8,7 +8,7 @@
     <title>Amanda Corraire</title>
     
     <link rel="shortcut icon" type="image/png" href="./img/amanda1.png"/>
-    <link rel="stylesheet" href="main.css.php">
+    <link rel="stylesheet" href="styles.css.php">
     <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 480px)" href="styles-mobile.css.php">
     <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 768px)" href="styles-tablet.css.php">
 
