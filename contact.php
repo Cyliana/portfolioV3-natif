@@ -11,13 +11,13 @@
             <div class="formulaire">
                 <form  method='POST' action="mail.php">
                     <label>Votre nom</label></br>
-                    <input type="text" name ="user_firstname"></br>
+                    <input type="text" id="nom" name ="user_firstname" required></br>
                     <label>Votre prenom</label></br>
-                    <input type="text" name ="user_name"></br>
+                    <input type="text" id="prenom" name ="user_name" required></br>
                     <label>Votre e-mail</label></br>
-                    <input type="email" name="user_mail" placeholder="nom.prenom@exemple.fr" ></br>
+                    <input type="email" id="mail" name="user_mail" placeholder="nom.prenom@exemple.fr" required></br>
                     <label>Votre message</label></br>
-                    <textarea id="textarea" placeholder="Votre message" name="user_message" rows="5" col="10"></textarea></br>
+                    <textarea type ="text" id="message"  name="user_message" placeholder="Votre message" rows="5" col="10" required></textarea></br>
                     <input id="button" type="submit" class="btn-purple">
                 </form>
             </div>

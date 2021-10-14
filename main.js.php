@@ -208,26 +208,49 @@ function moodsCreate()
 
 function mail()
 {
-    let data = new FormData(form);
-    let ajax = new XMLHttpRequest();
+    let nom  =  document.getElementById("nom");
+    let prenom = document.getElementById("prenom");
+    let mail = document.getElementById("mail");
+    let message = document.getElementById("message");
 
-    ajax.open("POST","mail.php", true);
-
-    ajax.onreadystatechange = () =>
+    email.addEventListener("input", function (event) 
+    {
+        if (email.validity.valid) 
         {
-            if (ajax.readyState == XMLHttpRequest.DONE)
+                
+            let data = new FormData(form);
+            let ajax = new XMLHttpRequest();
+
+            ajax.open("POST","mail.php", true);
+
+            ajax.onreadystatechange = () =>
             {
-                if(ajax.statusText == 'OK')
+                if (ajax.readyState == XMLHttpRequest.DONE)
                 {
-                   document.getElementById("formulaire").innerHTML = ajax.responseText;
-                }
-                else
-                {
-                   alert("Erreur");
+                    if(ajax.statusText == 'OK')
+                    {
+                    alert(ajax.responseText);
+                    }
+                    else
+                    {
+                    alert("Erreur");
+                    }
                 }
             }
+            ajax.send(data);
         }
-        ajax.send(data);
+
+    }, 
+    false);
+
+
+
+
+
+    
+
+
+    
 } 
 
 
