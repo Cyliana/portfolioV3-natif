@@ -88,6 +88,7 @@ input, button, submit
     position: relative;
     max-width: 1000px;
     min-height:120px;
+    max-height
 }
 
 #experiences

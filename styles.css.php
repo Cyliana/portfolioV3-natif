@@ -127,6 +127,11 @@ h3
     color:var(--text-color);
 }
 
+::-webkit-scrollbar
+{
+    display:none;
+}
+
 /************************************** NAVIGATION **************************************/
 
 nav
@@ -682,8 +687,8 @@ nav>ul>li>a:hover
     width:50%;
     margin:auto;
     align-self:center;
-    border-radius:30px;
     overflow:scroll;
+    display:inline-block;
 }
 
 form 
@@ -709,7 +714,17 @@ form input,textarea
     padding: 5px;
 } 
 
-::-webkit-scrollbar
+.alert
 {
-    display:none;
+    text-align:center;
+}
+
+.alert-success
+{
+    color:green;
+}
+
+.alert-danger
+{
+    color:red;
 }
